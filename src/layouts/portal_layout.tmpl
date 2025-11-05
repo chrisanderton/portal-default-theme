@@ -45,6 +45,7 @@
     <link href="/assets/stylesheets/fonts.css{{.previewId}}" rel="stylesheet">
     <link href="/assets/stylesheets/main.css{{.previewId}}" rel="stylesheet">
     <link href="/assets/stylesheets/github-markdown.css{{.previewId}}" rel="stylesheet">
+    <link href="/assets/stylesheets/custom.css{{.previewId}}" rel="stylesheet">
     <!-- Optional for syntax highlighting (if using highlightjs) -->
     <link href="/assets/vendor/highlightjs/vs.min.css{{.previewId}}" rel="stylesheet">
 
@@ -91,6 +92,22 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelectorAll('.markdown pre code[class*="language-"]')
     .forEach(function (block) {
       window.hljs.highlightElement(block);
+    });
+
+  document
+    .querySelectorAll('.customhtml pre code')
+    .forEach(function (block) {
+      if (block.className && block.className.indexOf('language-') !== -1) {
+        window.hljs.highlightElement(block);
+        return;
+      }
+      var source = block.textContent;
+      var result = window.hljs.highlightAuto(source || '');
+      block.innerHTML = result.value;
+      block.classList.add('hljs');
+      if (result.language) {
+        block.dataset.hljsLanguage = result.language;
+      }
     });
 });
 </script>

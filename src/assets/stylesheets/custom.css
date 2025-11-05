@@ -1,0 +1,313 @@
+.customhtml {
+  --ch-text-color: var(--tdp-text-color, #344054);
+  --ch-heading-color: var(--tdp-text-color-extra-dark, #111827);
+  --ch-muted-color: #475569;
+  --ch-link-color: var(--tdp-link-color, #2563eb);
+  --ch-link-hover: #1a56db;
+  --ch-surface-color: #ffffff;
+  --ch-surface-muted: #f5f7fa;
+  --ch-border-color: rgba(15, 23, 42, 0.08);
+  --ch-border-strong: rgba(15, 23, 42, 0.16);
+  --ch-inline-code-bg: rgba(15, 23, 42, 0.08);
+  --ch-inline-code-border: rgba(15, 23, 42, 0.16);
+  --ch-code-bg: #ffff;
+  --ch-code-border: rgba(15, 23, 42, 0.55);
+  --ch-shadow-subtle: 0 18px 42px -28px rgba(15, 23, 42, 0.55);
+  --ch-radius-sm: 8px;
+  --ch-radius-md: 12px;
+  color: var(--ch-text-color);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.customhtml > * {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.customhtml > *:last-child {
+  margin-bottom: 2rem;
+}
+
+.customhtml h1,
+.customhtml h2,
+.customhtml h3,
+.customhtml h4,
+.customhtml h5,
+.customhtml h6 {
+  color: var(--ch-heading-color);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.customhtml h1 {
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.customhtml h2 {
+  font-size: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ch-border-strong);
+}
+
+.customhtml h3 {
+  font-size: 1.4rem;
+}
+
+.customhtml h4 {
+  font-size: 1.2rem;
+}
+
+.customhtml h5 {
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ch-muted-color);
+}
+
+.customhtml h6 {
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ch-muted-color);
+}
+
+.customhtml p {
+  margin: 0 0 1.5rem;
+}
+
+.customhtml ul,
+.customhtml ol {
+  margin: 0 0 1.75rem 1.5rem;
+  padding: 0;
+}
+
+.customhtml li {
+  margin-bottom: 0.65rem;
+}
+
+.customhtml li::marker {
+  color: var(--ch-link-color);
+}
+
+.customhtml li > ul,
+.customhtml li > ol {
+  margin-top: 0.65rem;
+}
+
+.customhtml a {
+  color: var(--ch-link-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.customhtml a:hover,
+.customhtml a:focus {
+  color: var(--ch-link-hover);
+  border-bottom-color: currentColor;
+}
+
+.customhtml blockquote {
+  margin: 2.5rem 0;
+  padding: 1.4rem 1.8rem;
+  border-left: 4px solid var(--ch-link-color);
+  border-radius: var(--ch-radius-sm);
+  background: var(--ch-surface-muted);
+  color: var(--ch-muted-color);
+}
+
+.customhtml hr {
+  border: none;
+  margin: 3rem 0;
+  border-top: 1px solid var(--ch-border-strong);
+}
+
+.customhtml img,
+.customhtml video,
+.customhtml iframe {
+  display: block;
+  max-width: 100%;
+  margin: 2.5rem 0;
+  border-radius: var(--ch-radius-sm);
+  box-shadow: var(--ch-shadow-subtle);
+}
+
+.customhtml code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  background: var(--ch-inline-code-bg);
+  border: 1px solid var(--ch-inline-code-border);
+  border-radius: 0.5rem;
+  color: var(--ch-heading-color);
+  padding: 0.15em 0.45em;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.customhtml pre {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem;
+  background: var(--ch-code-bg);
+  color: #000;
+  border: 1px solid var(--ch-code-border);
+  border-radius: var(--ch-radius-md);
+  overflow: auto;
+  box-shadow: var(--ch-shadow-subtle);
+}
+
+.customhtml pre code {
+  display: block;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  white-space: pre;
+  line-height: 1.6;
+}
+
+.customhtml table {
+  width: 100%;
+  margin: 2.5rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--ch-border-strong);
+  border-radius: var(--ch-radius-md);
+  box-shadow: var(--ch-shadow-subtle);
+  background: var(--ch-surface-color);
+  overflow: hidden;
+}
+
+.customhtml table thead tr {
+  background: var(--ch-surface-muted);
+}
+
+.customhtml table th,
+.customhtml table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--ch-border-color);
+  border-right: 1px solid var(--ch-border-color);
+  text-align: left;
+}
+
+.customhtml table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--ch-muted-color);
+}
+
+.customhtml table td {
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.customhtml table tr:last-child td {
+  border-bottom: none;
+}
+
+.customhtml table th:last-child,
+.customhtml table td:last-child {
+  border-right: none;
+}
+
+.customhtml table tbody tr:nth-child(even) {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.customhtml dl {
+  margin: 2.5rem 0;
+  background: var(--ch-surface-color);
+  border: 1px solid var(--ch-border-strong);
+  border-radius: var(--ch-radius-md);
+  box-shadow: var(--ch-shadow-subtle);
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) 1fr;
+  overflow: hidden;
+}
+
+.customhtml dl > dt,
+.customhtml dl > dd {
+  margin: 0;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid var(--ch-border-color);
+}
+
+.customhtml dl > dt {
+  grid-column: 1;
+  font-weight: 600;
+  color: var(--ch-heading-color);
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+  border-right: 1px solid var(--ch-border-color);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.customhtml dl > dd {
+  grid-column: 2;
+  color: var(--ch-muted-color);
+  font-size: 0.95rem;
+}
+
+.customhtml dl > dd p {
+  margin-bottom: 1rem;
+}
+
+.customhtml dl > dd p:last-child {
+  margin-bottom: 0;
+}
+
+.customhtml dl > dt:last-of-type,
+.customhtml dl > dd:last-of-type {
+  border-bottom: none;
+}
+
+.customhtml dl > dd code {
+  background: var(--ch-inline-code-bg);
+  border: 1px solid var(--ch-inline-code-border);
+  color: var(--ch-heading-color);
+}
+
+@media (max-width: 960px) {
+  .customhtml table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .customhtml {
+    font-size: 15px;
+  }
+
+  .customhtml h1 {
+    font-size: 2rem;
+  }
+
+  .customhtml h2 {
+    font-size: 1.5rem;
+  }
+
+  .customhtml dl {
+    grid-template-columns: 1fr;
+  }
+
+  .customhtml dl > dt {
+    border-right: none;
+  }
+
+  .customhtml dl > dd {
+    border-bottom: 1px solid var(--ch-border-color);
+  }
+
+  .customhtml dl > dd:last-of-type {
+    border-bottom: none;
+  }
+}
