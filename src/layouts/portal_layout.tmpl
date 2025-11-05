@@ -44,6 +44,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="/assets/stylesheets/fonts.css{{.previewId}}" rel="stylesheet">
     <link href="/assets/stylesheets/main.css{{.previewId}}" rel="stylesheet">
+    <link href="/assets/stylesheets/github-markdown.css{{.previewId}}" rel="stylesheet">
+    <!-- Optional for syntax highlighting (if using highlightjs) -->
+    <link href="/assets/vendor/highlightjs/vs.min.css{{.previewId}}" rel="stylesheet">
 
     <script>
       window.addEventListener('pageshow', (event) => {
@@ -75,6 +78,20 @@
         {{ render "footer" . }}
       {{end}}
 
+    <script src="/assets/vendor/highlightjs/highlight.min.js{{.previewId}}"></script>
   </body>
-
+<!-- Optional for syntax highlighting (uses highlightjs) -->
+<script src="/assets/vendor/highlightjs/highlight.min.js{{.previewId}}"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.hljs) {
+    return;
+  }
+  document
+    .querySelectorAll('.markdown pre code[class*="language-"]')
+    .forEach(function (block) {
+      window.hljs.highlightElement(block);
+    });
+});
+</script>
 </html>

@@ -28,16 +28,18 @@
     <div>
       <div class="container">
         <div>
-          <div class="text-center">
+          <div>
             <h2 class="pb-3 pt-5">{{safe .blocks.NoImageSectionTitle.Content}}</h2>
           </div>
-          <p>
-            {{if .blocks.NoImageSectionDescription.MarkdownEnabled}}
+          {{if .blocks.NoImageSectionDescription.MarkdownEnabled}}
+            <div class="markdown">
               {{safe_md .blocks.NoImageSectionDescription.MarkdownContent}}
-            {{else}}
+            </div>
+          {{else}}
+            <div>
               {{safe .blocks.NoImageSectionDescription.Content}}
-            {{end}}
-          </p>
+              </div>
+          {{end}}
         </div>
       </div>
     </div>
